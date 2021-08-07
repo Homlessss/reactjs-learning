@@ -1,12 +1,12 @@
-import React from 'react';
-import Button from '@atlaskit/button';
+import React from "react";
+import Todo from "./Todo";
 
-export default function TodoList() {
-    return(
-      <>
-        <Button shouldFitContainer>Item 1</Button>
-        <Button shouldFitContainer>Item 2</Button>
-        <Button shouldFitContainer>Item 3</Button>
-      </>
-    );
-};
+export default function TodoList({ todoList }) {
+  return (
+    <>
+      {todoList.map((todo) => (
+        <Todo todo={todo} />
+      ))}
+    </>
+  );
+}
